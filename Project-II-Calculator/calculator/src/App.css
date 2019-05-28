@@ -42,3 +42,7 @@
     width: 100%;
     background: red;
 }
+
+.square.operator__symbol:active {
+    background: rgb(170, 0, 0);
+}

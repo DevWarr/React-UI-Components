@@ -5,3 +5,7 @@ button {
     background: white;
     border: 1px solid darkgray;
 }
+
+button:active {
+    background: #AAAAAA;
+}
