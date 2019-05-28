@@ -1,1 +1,14 @@
 /* All styles for your header Components live here */
+
+.gray {
+    color: gray;
+    font-weight: normal;
+}
+
+header {
+    display: flex;
+}
+
+.headerImg {
+    width: 10%;
+}
