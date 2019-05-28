@@ -7,8 +7,20 @@
 
 header {
     display: flex;
+    justify-content: space-between;
+}
+
+.flexHeader {
+    width: 90%;
 }
 
 .headerImg {
-    width: 10%;
+    width: 8%;
+    padding-top: 1.2rem;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}
+

@@ -2,17 +2,31 @@
 
 
 .card {
+    cursor: pointer;
     margin-left: 10%;
     border: 1px solid lightgray;
     border-radius: 5px;
     overflow: hidden;
 }
 
-img {
+
+/* The .bannerImg div that contains the react img is shaped so that the image
+   itself can be a larger size while the extra black space is cropped out.
+   */
+.bannerImg {
+    margin-top: -100px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.reactLogo {
+    margin: 0 auto;
     width: 100%;
+    height: 500px;
+    object-fit: cover;
 }
 
 .cardContent {
     line-height: 1;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
