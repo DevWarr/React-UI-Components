@@ -9,6 +9,11 @@ class App extends React.Component {
     total: "0"
   };
 
+  slideNum(num) {
+    this.setState.total = num;
+    console.log(this.state);
+  }
+
   render() {
     return (
       <div className="calculator">
@@ -18,7 +23,7 @@ class App extends React.Component {
       <div className="buttons">
         <div className="numbers">
           <NumberButton buttonStyle="rectangle" text="CLEAR" />
-          <NumberButton buttonStyle="square" text="1" />
+          <NumberButton buttonStyle="square" text="1" onClick={() => console.log('click')} />
           <NumberButton buttonStyle="square" text="2" />
           <NumberButton buttonStyle="square" text="3" />
           <NumberButton buttonStyle="square" text="4" />
