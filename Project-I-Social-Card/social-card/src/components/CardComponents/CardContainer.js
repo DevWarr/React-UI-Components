@@ -4,8 +4,13 @@ import CardBanner from './CardBanner.js';
 import CardContent from './CardContent.js';
 
 const CardContainer = () => {
+
+    const reactLink = event => {
+        window.location = 'https://www.reactjs.org';
+    }
+
     return (
-        <div className="card">
+        <div className="card" onClick={() => reactLink()} >
             <CardBanner />
             <CardContent />
         </div>
