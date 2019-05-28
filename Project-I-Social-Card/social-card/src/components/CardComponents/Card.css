@@ -1,1 +1,18 @@
 /* All styles for your Card Components live here */
+
+
+.card {
+    margin-left: 10%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.cardContent {
+    line-height: 1;
+    margin-left: 1.5rem;
+}
