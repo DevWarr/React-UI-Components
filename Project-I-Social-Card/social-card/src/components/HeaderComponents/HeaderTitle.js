@@ -10,7 +10,7 @@ const HeaderTitle = () => {
         <div className="title">
             <h3>
                 <strong>Lambda School</strong>
-                @LambdaSchool · {date}
+                <span className="gray">@LambdaSchool · {date}</span>
             </h3>
         </div>
     );
