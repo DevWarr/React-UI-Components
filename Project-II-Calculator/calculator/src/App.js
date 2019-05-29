@@ -36,7 +36,7 @@ class App extends React.Component {
     }
   }
 
-  divide() {
+  operator(sign) {
     if (this.state.function) {
       alert('Please click the equals sign before performing another operation.');
     } else if (typeof this.state.display[0] !== "number") {
@@ -45,55 +45,7 @@ class App extends React.Component {
       let first = this.state.display[0];
       this.setState({
         num1: first,
-        function: ' / ',
-        display: [0]
-      });
-      console.log(this.state);
-    }
-  }
-
-  multiply() {
-    if (this.state.function) {
-      alert('Please click the equals sign before performing another operation.');
-    } else if (typeof this.state.display[0] !== "number") {
-      alert('Please press CLEAR to reset the calculator.');
-    } else {
-      let first = this.state.display[0];
-      this.setState({
-        num1: first,
-        function: ' * ',
-        display: [0]
-      });
-      console.log(this.state);
-    }
-  }
-
-  subtract() {
-    if (this.state.function) {
-      alert('Please click the equals sign before performing another operation.');
-    } else if (typeof this.state.display[0] !== "number") {
-      alert('Please press CLEAR to reset the calculator.');
-    } else {
-      let first = this.state.display[0];
-      this.setState({
-        num1: first,
-        function: ' - ',
-        display: [0]
-      });
-      console.log(this.state);
-    }
-  }
-
-  add() {
-    if (this.state.function) {
-      alert('Please click the equals sign before performing another operation.');
-    } else if (typeof this.state.display[0] !== "number") {
-      alert('Please press CLEAR to reset the calculator.');
-    } else {
-      let first = this.state.display[0];
-      this.setState({
-        num1: first,
-        function: ' + ',
+        function: sign,
         display: [0]
       });
       console.log(this.state);
@@ -101,7 +53,7 @@ class App extends React.Component {
   }
 
   equals() {
-    if (this.state.num1 && this.state.function) {
+    if (typeof this.state.num1 === 'number' && this.state.function) {
       let result = Math.floor(eval(String(this.state.num1 + this.state.function + this.state.display[0])));
       let test = String(result);
       console.log(test);
