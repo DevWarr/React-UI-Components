@@ -39,6 +39,8 @@ class App extends React.Component {
   divide() {
     if (this.state.function) {
       alert('Please click the equals sign before performing another operation.');
+    } else if (typeof this.state.display[0] !== "number") {
+      alert('Please press CLEAR to reset the calculator.');
     } else {
       let first = this.state.display[0];
       this.setState({
@@ -53,6 +55,8 @@ class App extends React.Component {
   multiply() {
     if (this.state.function) {
       alert('Please click the equals sign before performing another operation.');
+    } else if (typeof this.state.display[0] !== "number") {
+      alert('Please press CLEAR to reset the calculator.');
     } else {
       let first = this.state.display[0];
       this.setState({
@@ -67,6 +71,8 @@ class App extends React.Component {
   subtract() {
     if (this.state.function) {
       alert('Please click the equals sign before performing another operation.');
+    } else if (typeof this.state.display[0] !== "number") {
+      alert('Please press CLEAR to reset the calculator.');
     } else {
       let first = this.state.display[0];
       this.setState({
@@ -81,6 +87,8 @@ class App extends React.Component {
   add() {
     if (this.state.function) {
       alert('Please click the equals sign before performing another operation.');
+    } else if (typeof this.state.display[0] !== "number") {
+      alert('Please press CLEAR to reset the calculator.');
     } else {
       let first = this.state.display[0];
       this.setState({
@@ -96,7 +104,10 @@ class App extends React.Component {
     if (this.state.num1 && this.state.function) {
       let result = Math.floor(eval(String(this.state.num1 + this.state.function + this.state.display[0])));
       let test = String(result);
-      if (test.length > 7) {
+      console.log(test);
+      if (test === "NaN" || test === "Infinity") {
+        result = "Undefined"
+      } else if (test.length > 7) {
         result = "Too big!"
       }
       this.setState({
@@ -133,10 +144,10 @@ class App extends React.Component {
             <NumberButton buttonStyle="rectangle" text="0" onClick={() => this.slideNum(0)} />
           </div>
           <div className="operators">
-            <ActionButton buttonStyle="square operator__symbol" text="÷" onClick={() => this.divide()} />
-            <ActionButton buttonStyle="square operator__symbol" text="×" onClick={() => this.multiply()} />
-            <ActionButton buttonStyle="square operator__symbol" text="-" onClick={() => this.subtract()} />
-            <ActionButton buttonStyle="square operator__symbol" text="+" onClick={() => this.add()} />
+            <ActionButton buttonStyle="square operator__symbol" text="÷" onClick={() => this.operator(" / ")} />
+            <ActionButton buttonStyle="square operator__symbol" text="×" onClick={() => this.operator(" * ")} />
+            <ActionButton buttonStyle="square operator__symbol" text="-" onClick={() => this.operator(" - ")} />
+            <ActionButton buttonStyle="square operator__symbol" text="+" onClick={() => this.operator(" + ")} />
             <ActionButton buttonStyle="square operator__symbol" text="=" onClick={() => this.equals()} />
           </div>
         </div>
