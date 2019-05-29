@@ -36,7 +36,7 @@ class App extends React.Component {
     }
   }
 
-  divide(num1, num2) {
+  divide() {
     if (this.state.function) {
       alert('Please click the equals sign before performing another operation.');
     } else {
@@ -46,29 +46,63 @@ class App extends React.Component {
         function: ' / ',
         display: [0]
       });
+      console.log(this.state);
     }
-    console.log(this.state);
   }
 
-  multiply(num1, num2) {
-    
+  multiply() {
+    if (this.state.function) {
+      alert('Please click the equals sign before performing another operation.');
+    } else {
+      let first = this.state.display[0];
+      this.setState({
+        num1: first,
+        function: ' * ',
+        display: [0]
+      });
+      console.log(this.state);
+    }
   }
 
-  subtract(num1, num2) {
-    
+  subtract() {
+    if (this.state.function) {
+      alert('Please click the equals sign before performing another operation.');
+    } else {
+      let first = this.state.display[0];
+      this.setState({
+        num1: first,
+        function: ' - ',
+        display: [0]
+      });
+      console.log(this.state);
+    }
   }
 
-  add(num1, num2) {
-    
+  add() {
+    if (this.state.function) {
+      alert('Please click the equals sign before performing another operation.');
+    } else {
+      let first = this.state.display[0];
+      this.setState({
+        num1: first,
+        function: ' + ',
+        display: [0]
+      });
+      console.log(this.state);
+    }
   }
 
   equals() {
-    if (this.state.num1 && this.state.function && this.state.display[0] != 0) {
-      let result = eval(String(this.state.num1 + this.state.function + this.state.display[0]))
+    if (this.state.num1 && this.state.function) {
+      let result = Math.floor(eval(String(this.state.num1 + this.state.function + this.state.display[0])));
+      let test = String(result);
+      if (test.length > 7) {
+        result = "Too big!"
+      }
       this.setState({
         num1: null,
         function: null,
-        display: [Math.floor(result)]
+        display: [result]
       });
     }
     console.log(this.state);
@@ -79,7 +113,10 @@ class App extends React.Component {
     return (
       <div className="calculator">
         <div className="display">
-          <CalculatorDisplay text={this.state.display.toString()}/>
+          <CalculatorDisplay 
+          text={this.state.display.toString()} 
+          operation={this.state.function ? this.state.function : " "}
+          />
         </div>
         <div className="buttons">
           <div className="numbers">

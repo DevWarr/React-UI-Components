@@ -4,7 +4,8 @@ import './Display.css';
 
 function CalculatorDisplay(props) {
     return (
-        <div>
+        <div className="display__top">
+            <p>{props.operation}</p>
             <h2>{props.text}</h2>
         </div>
     );
