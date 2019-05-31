@@ -37,23 +37,24 @@
 
 #### Project 1 MVP requirements
 
-- Create a `<HeaderContainer />` container component that will hold your header components.
+- [x] Create a `<HeaderContainer />` container component that will hold your header components.
 
-  - Create an `<ImageThumbnail />` component using this image url https://tk-assets.lambdaschool.com/1c1b7262-cf23-4a9f-90b6-da0d3c74a5c6_lambdacrest.png as it's img src.
-  - Create a `<HeaderTitle />` component that displays the Lambda School header text, @LambdaSchool handle and timestamp.
-  - Create a `<HeaderContent />` component that displays the copy provided in the headers content.
+  - [x] Create an `<ImageThumbnail />` component using this image url https://tk-assets.lambdaschool.com/1c1b7262-cf23-4a9f-90b6-da0d3c74a5c6_lambdacrest.png as it's img src.
+  - [x] Create a `<HeaderTitle />` component that displays the Lambda School header text, @LambdaSchool handle and timestamp.
+  - [x] Create a `<HeaderContent />` component that displays the copy provided in the headers content.
 
-- Create a `<CardContainer/ >` container component that will hold your card components.
-  - Create a `<CardBanner />` component that will display this image as it's background: https://tk-assets.lambdaschool.com/fcd75197-7d12-46ec-bc9e-4130f34822fa_reactbackground.png
-  - Create a `<CardContent />` component that displays the card copy provided.
-  - The entire `<CardContainer />` should take a user to `https://www.reactjs.org` when clicked.
+- [x] Create a `<CardContainer/ >` container component that will hold your card components.
+  - [x] Create a `<CardBanner />` component that will display this image as it's background: https://tk-assets.lambdaschool.com/fcd75197-7d12-46ec-bc9e-4130f34822fa_reactbackground.png
+  - [x] Create a `<CardContent />` component that displays the card copy provided.
+  - [x] The entire `<CardContainer />` should take a user to `https://www.reactjs.org` when clicked.
 
 #### Project 1 Stretch Problems
 
 - Create a `<Footer/>` component that pulls in the icons and displays them properly.
   - Build out the functionality so that a user can click on the icons and have them react to events.
 - Ensure that your product is as pixel perfect as possible using any tools that you were introduced to in previous weeks.
-- Look up the `moment.js` library and figure out how to format your `time-stamp` in your header to be todays date.
+- [x] Look up the `moment.js` library and figure out how to format your `time-stamp` in your header to be todays date.
+  - _Did not use the moment.js library, but did use new Date().toLocaleString()._
 
 ## _Project II - React Calculator_
 
@@ -70,23 +71,24 @@
 
 #### Project 2 MVP requirements
 
-- Create a `<NumberButton />` component that can accept `props` and display any number/symbol passed down as `text`.
-  - Example your component should be able to render a dynamic prop called text:
-  - Your button button should also be able to accept dynamic props `buttonStyle` for styling
+- [x] Create a `<NumberButton />` component that can accept `props` and display any number/symbol passed down as `text`.
+  - [x] Example your component should be able to render a dynamic prop called text:
+  - [x] Your button button should also be able to accept dynamic props `buttonStyle` for styling
 
 ```js
 <button className={props.buttonStyle}>{props.text}</button>
 ```
 
-- Create an `<ActionButton />` component that will be used for the `zero` character and the `clear` button.
+- [x] Create an `<ActionButton />` component that will be used for the `zero` character and the `clear` button.
+  - _Instead used `ActionButton />` for the operators._
 - Create a `<CalculatorDisplay />` component that will be used as the `calculator display`
 
 #### Project 2 Stretch Problems
 
-- Re-factor your `App.js` file to be a classical component that can hold state on it's constructor. (There is some documentation in training kit on how this works).
-  - On your state object be sure to include a property for the `total` that can be passed down to your `<CalculatorDisplay />` component.
-- Create some `handler functions` that can take in some information from an, `onClick` and use that information to update the `total` on the App state.
+- [x] Re-factor your `App.js` file to be a classical component that can hold state on it's constructor. (There is some documentation in training kit on how this works).
+  - [x] On your state object be sure to include a property for the `total` that can be passed down to your `<CalculatorDisplay />` component.
+- Create some `handler functions` that can take in some information from an `onClick` and use that information to update the `total` on the App state.
 
-  - `this.setState` will be your best friend here :)
+  - `this.setState` will be your best friend here :) _(That it was.)_
 
   **GOOD LUCK!**

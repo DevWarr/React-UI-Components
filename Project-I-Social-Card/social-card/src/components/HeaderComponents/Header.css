@@ -1,1 +1,25 @@
 /* All styles for your header Components live here */
+
+.gray {
+    color: gray;
+    font-weight: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexHeader {
+    width: 90%;
+}
+
+.headerImg {
+    width: 8%;
+    padding-top: 1.2rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
